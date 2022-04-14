@@ -65,7 +65,7 @@
                                     <span class="block"><b>Revoked: </b>{{ $client->revoked }}</span>
                                   </h2>
                                 </div>
-                              </div>
+                            </div>
                             @endforeach
                         </div>
                     </div>
