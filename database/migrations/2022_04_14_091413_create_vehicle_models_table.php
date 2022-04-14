@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('code');
             $table->string('year');
+            $table->string('cost')->nullable();
             $table->boolean('supported');
             $table->integer('make_id')->unsigned()->index();
             $table->foreign('make_id')->references('id')->on('vehicle_makes');
