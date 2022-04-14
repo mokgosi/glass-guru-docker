@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('vehicle_makes', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('code');
-            $table->text('logo')->nullable();
+        Schema::create('qr_codes', function (Blueprint $table) {
+            $table->id();
+            $table->string('path');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vehicle_makes');
+        Schema::dropIfExists('qr_code');
     }
 };

@@ -22,6 +22,14 @@ return new class extends Migration
             $table->string('store_address');
             $table->string('client_name');
             $table->string('client_phone');
+            $table->string('client_email')->nullable();
+            $table->string('vihicle_vin');
+            $table->string('vihicle_make');
+            $table->string('vihicle_manufacturer');
+            $table->year('vihicle_year');
+            $table->string('vihicle_registration');
+            $table->date('vihicle_license_issue_date');
+            $table->date('vihicle_license_expiry_date');
             $table->timestamps();
         });
     }
