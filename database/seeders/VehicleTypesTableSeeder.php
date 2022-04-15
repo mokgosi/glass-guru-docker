@@ -15,7 +15,7 @@ class VehicleTypesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tbl_vehicle_types')->delete();
+        DB::table('vehicle_types')->delete();
         $types = array(
           array('id' => 1,'name' => 'Hatchback'),
           array('id' => 2,'name' => 'Sedan'),
@@ -25,6 +25,6 @@ class VehicleTypesSeeder extends Seeder
           array('id' => 6,'name' => 'Coupe'),
           array('id' => 7,'name' => 'Convertible'),
         );
-        DB::table('tbl_vehicle_types')->insert($types);
+        DB::table('vehicle_types')->insert($types);
     }
 }

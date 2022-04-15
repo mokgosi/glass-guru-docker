@@ -24,7 +24,12 @@ $ ./vendor/bin/sail up
 ### Setup containers and images
 ```
 $ ./vendor/bin/sail up 
+```
 
+### Compile assets
+```
+sail npm run prod
+```
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).

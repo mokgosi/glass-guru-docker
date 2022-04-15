@@ -4,17 +4,29 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\QrCode; 
 use Libern\QRCodeReader\QRCodeReader;
 use App\Http\Requests\QRCodeRequest;
+use App\Models\QrCode; 
+use Zxing\QrReader;
+use Illuminate\Support\Facades\Storage;
+
+use Carbon\Carbon;
 
 class QRCodeController extends Controller
 {
-    public function qrCodeReader($path)
+    public function qrCodeReader($path='')
     {
-        $QRCodeReader = new QRCodeReader();
-        $qrcode_text = $QRCodeReader->decode("/home/pictures/qr_code.png");
-        return $qrcode_text;
+        $path = Storage::path('public/files/9fuCFog1BV0Qu474udAmTobGeUBWkv4RYQCK7roY.png');
+
+        $qrcode = new QrReader($path);
+        $text = $qrcode->text(); 
+        
+        // $this->checkIfLicenseExpired($text);
+        
+        return response()->json([
+            "success" => true,
+            "text" => $text,
+        ]);
     }
 
     public function qrCodeUploader(QRCodeRequest $request)
@@ -36,5 +48,21 @@ class QRCodeController extends Controller
             ]);
         }
         return response()->json(['error' => 'File upload failed '], 401);
+    }
+
+    public function checkIfLicenseExpired($expiryDate): bool
+    {
+        if(Carbon::now() > Carbon::parse($expiryDate) ) {
+            return true;
+        } 
+        return false;
+    }
+
+    public function checkIfVehicleModelSupported($model): bool
+    {
+        if(in_array($model, ['BMW', 'Merceds', 'Audi'])) {
+            return false;
+        }
+        return true;
     }
 }

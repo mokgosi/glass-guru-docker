@@ -15,7 +15,7 @@ class VehicleModelsTableSeeder extends Seeder
   */
   public function run()
   {
-    DB::table('tbl_vehicle_models')->delete();
+    DB::table('vehicle_models')->delete();
     $models1 = array(
       array('id' =>1, 'make_id' =>1, 'code' => 'CL_MODELS', 'name' => 'CL Models (4)'),
       array('id' =>2, 'make_id' =>1, 'code' =>'2.2CL', 'name' => ' - 2.2CL'),
@@ -1336,6 +1336,6 @@ class VehicleModelsTableSeeder extends Seeder
       array('id' =>1313, 'make_id' =>71, 'code' =>'GVX','name' => 'GVX'),
       array('id' =>1314, 'make_id' =>71, 'code' =>'YUOTH','name' => 'Other Yugo Models'),
     );
-    DB::table('tbl_vehicle_models')->insert($models2);
+    DB::table('vehicle_models')->insert($models2);
   }
 }

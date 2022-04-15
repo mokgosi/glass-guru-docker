@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             VehicleMakesTableSeeder::class,
             VehicleModelsTableSeeder::class,
-            VehicleTypesTableSeeder::class
+            VehicleTypesTableSeeder::class,
+            UnsupportedMakesTableSeeder::class
         ]);
     }
 }

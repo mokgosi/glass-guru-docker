@@ -29,4 +29,5 @@ use App\Http\Controllers\Api\QRCodeController;
 
 
 Route::post('upload-qrcode-file', [QRCodeController::class, 'qrCodeUploader']);
+Route::post('decode-qrcode-file', [QRCodeController::class, 'qrCodeReader']);
 

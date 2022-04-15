@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class VehibleMakesSeeder extends Seeder
+class VehibleMakesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class VehibleMakesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tbl_vehicle_makes')->delete();
+        DB::table('vehicle_makes')->delete();
         $makes = array(
           array('id' =>1 , 'name' => 'Acura' ,'code' => 'ACURA'),
           array('id' =>2 , 'name' => 'Alfa Romeo' ,'code' => 'ALFA'),
@@ -89,6 +89,6 @@ class VehibleMakesSeeder extends Seeder
           array('id' =>70 , 'name' => 'Volvo' ,'code' => 'VOLVO'),
           array('id' =>71 , 'name' => 'Yugo' ,'code' => 'YUGO'),
         );
-        DB::table('tbl_vehicle_makes')->insert($makes);
+        DB::table('vehicle_makes')->insert($makes);
     }
 }

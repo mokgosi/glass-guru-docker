@@ -10,4 +10,9 @@ class VehicleMake extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'code'];
+
+    public function models()
+    {
+        return $this->hasMany('App\Models\VehicleModel');
+    }
 }

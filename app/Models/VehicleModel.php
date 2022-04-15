@@ -9,5 +9,10 @@ class VehicleModel extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'code', 'year', 'supported'];
+    protected $fillable = ['name', 'code', 'year'];
+
+    public function make()
+    {
+        return $this->belongsTo('App\Model\VehicleMake');
+    }
 }
