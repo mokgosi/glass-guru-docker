@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class QRCode extends Model
+class QrCode extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'path'
+        'path', 'name'
     ];
 }

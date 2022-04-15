@@ -14,10 +14,19 @@ use App\Http\Controllers\Api\QRCodeController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+// Route::group(['prefix' => 'auth'], function () {
+//      Route::post('login', 'Auth\AuthController@login')->name('login');
+//      Route::post('register', 'Auth\AuthController@register');
+//      Route::group(['middleware' => 'auth:api'], function() {
+//           Route::get('logout', 'Auth\AuthController@logout');
+//           Route::get('user', 'Auth\AuthController@user');
+//    });
+// });
 
 
-Route::post('uploading-qrcode-file', [QRCodeController::class, 'qrCodeUploader']);
+Route::post('upload-qrcode-file', [QRCodeController::class, 'qrCodeUploader']);
 

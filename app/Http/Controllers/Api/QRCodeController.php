@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\QRCode; 
+use App\Models\QrCode; 
 use Libern\QRCodeReader\QRCodeReader;
-use Validator;
+use App\Http\Requests\QRCodeRequest;
 
 class QRCodeController extends Controller
 {
@@ -17,24 +17,16 @@ class QRCodeController extends Controller
         return $qrcode_text;
     }
 
-    public function qrCodeUploader(Request $request)
+    public function qrCodeUploader(QRCodeRequest $request)
     {
-        $validator = Validator::make($request->all(),[ 
-            'file' => 'required|mimes:doc,docx,pdf,txt,csv|max:2048',
-        ]);   
-
-        if($validator->fails()) {          
-            return response()->json(['error'=>$validator->errors()], 401);                        
-        }  
-
-        if ($file = $request->file('file')) {
+        if ($file = $request->file('path')) {
             $path = $file->store('public/files');
             $name = $file->getClientOriginalName();
   
             //store your file into directory and db
-            $save = new QRCode();
+            $save = new QrCode();
             $save->name = $file;
-            $save->store_path= $path;
+            $save->path = $path;
             $save->save();
                
             return response()->json([
@@ -43,5 +35,6 @@ class QRCodeController extends Controller
                 "file" => $file
             ]);
         }
+        return response()->json(['error' => 'File upload failed '], 401);
     }
 }
