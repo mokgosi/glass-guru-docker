@@ -30,5 +30,8 @@ use App\Http\Controllers\Api\VehicleController;
 
 
 Route::post('upload-qrcode-file', [QRCodeController::class, 'qrCodeUploader']);
-Route::post('decode-qrcode-file', [QRCodeController::class, 'qrCodeReader']);
-Route::get('get-vehicle-details', [VehicleController::class, 'getVehicelDetails']);
+// Route::post('decode-qrcode-file', [QRCodeController::class, 'qrCodeReader']);
+Route::get('unsupported-vehicle-makes', [QRCodeController::class, 'checkIfVehicleMakeSupported']);
+Route::get('license-expired', [QRCodeController::class, 'checkIfLicenseExpired']);
+Route::get('get-vehicle-details', [QRCodeController::class, 'getVehicelDetails']);
+

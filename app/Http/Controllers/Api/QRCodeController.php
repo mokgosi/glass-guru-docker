@@ -11,6 +11,7 @@ use Zxing\QrReader;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
 use App\Models\VehicleModel;
+use App\Models\VehicleMake;
 
 class QRCodeController extends Controller
 {
@@ -21,7 +22,7 @@ class QRCodeController extends Controller
 
             $qrcode = new QrReader($path);
             $text = $qrcode->text(); 
-            
+
             return response()->json([
                 "success" => true,
                 "text" => $text,
@@ -37,22 +38,51 @@ class QRCodeController extends Controller
         if ($file = $request->file('path')) {
             $path = $file->store('public/files');
             $name = $file->getClientOriginalName();
-  
+
+            $qrCodeDetails = $this->qrCodeReader($path);
+            $valid = $this->validateQRCodeDetails($qrCodeDetails);
+            
+            if(!is_bool(gettype($valid))) {
+                return $valid; //json formatt error response
+            } else {
+                //get full 
+            }
             //store your file into directory and db
             $save = new QrCode();
             $save->name = $name;
             $save->path = $path;
             $save->save();
 
-            $qrCodeDetails = $this->qrCodeReader($path);
-               
             return $qrCodeDetails;
         }
         return response()->json(['error' => 'File upload failed...'], 401);
     }
 
-    public function getAddionalVehicleDetails($model)
+    public function validateQRCodeDetails($qrCodeDetails)
     {
+        $qrCodeDetails = json_decode($qrCodeDetails->getContent(), true);
+        $pieces = explode(';', $qrCodeDetails['text']);
+
+        //check if license expired first
+        if($this->checkIfLicenseExpired($pieces[6])) {
+            return response()->json(['error' => 'License expired...'], 401);
+        }
+
+        //check year
+        if($pieces[3] < 2006) {
+            return response()->json(['error' => "Models before 2006 - Not Supported..."], 401);
+        }
+
+        //check make supported
+        if($this->checkIfVehicleMakeSupported($pieces[1])) {
+            return response()->json(['error' => "Vehicle Make: {$pieces[1]} - Not Supported..."], 401);
+        }
+        return true;
+    }
+
+    public function getAddionalVehicleDetails(Request $request)
+    {
+        $model = $request->get('model');
         $vehicle = VehicleModel::with('make')->where('name', $model)->first();
         return $vehicle;
     }
@@ -62,12 +92,17 @@ class QRCodeController extends Controller
         if(Carbon::now() > Carbon::parse($expiryDate) ) {
             return true;
         } 
+        
         return false;
     }
 
-    public function checkIfVehicleModelSupported($model): bool
+    public function checkIfVehicleMakeSupported($make): bool
     {
-        if(in_array($model, ['BMW', 'Merceds', 'Audi'])) {
+        // $make = $request->get('make'); //have to check make case-sensetive
+
+        $unsupported = VehicleMake::where('supported', 0)->pluck('name')->toArray();
+        
+        if(in_array($make, $unsupported)) {
             return false;
         }
         return true;
