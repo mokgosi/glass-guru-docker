@@ -9,24 +9,27 @@ use App\Http\Requests\QRCodeRequest;
 use App\Models\QrCode; 
 use Zxing\QrReader;
 use Illuminate\Support\Facades\Storage;
-
 use Carbon\Carbon;
+use App\Models\VehicleModel;
 
 class QRCodeController extends Controller
 {
     public function qrCodeReader($path='')
     {
-        $path = Storage::path('public/files/9fuCFog1BV0Qu474udAmTobGeUBWkv4RYQCK7roY.png');
+        if(!empty($path)) {
+            $path = Storage::path($path);
 
-        $qrcode = new QrReader($path);
-        $text = $qrcode->text(); 
-        
-        // $this->checkIfLicenseExpired($text);
-        
-        return response()->json([
-            "success" => true,
-            "text" => $text,
-        ]);
+            $qrcode = new QrReader($path);
+            $text = $qrcode->text(); 
+            
+            return response()->json([
+                "success" => true,
+                "text" => $text,
+                "additional" => ''
+            ]);
+        }
+        return response()->json(['error' => 'File upload failed..'], 401);
+
     }
 
     public function qrCodeUploader(QRCodeRequest $request)
@@ -37,17 +40,21 @@ class QRCodeController extends Controller
   
             //store your file into directory and db
             $save = new QrCode();
-            $save->name = $file;
+            $save->name = $name;
             $save->path = $path;
             $save->save();
+
+            $qrCodeDetails = $this->qrCodeReader($path);
                
-            return response()->json([
-                "success" => true,
-                "message" => "File successfully uploaded",
-                "file" => $file
-            ]);
+            return $qrCodeDetails;
         }
-        return response()->json(['error' => 'File upload failed '], 401);
+        return response()->json(['error' => 'File upload failed...'], 401);
+    }
+
+    public function getAddionalVehicleDetails($model)
+    {
+        $vehicle = VehicleModel::with('make')->where('name', $model)->first();
+        return $vehicle;
     }
 
     public function checkIfLicenseExpired($expiryDate): bool

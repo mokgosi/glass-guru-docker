@@ -19,7 +19,6 @@ class DatabaseSeeder extends Seeder
             VehicleMakesTableSeeder::class,
             VehicleModelsTableSeeder::class,
             VehicleTypesTableSeeder::class,
-            UnsupportedMakesTableSeeder::class
         ]);
     }
 }

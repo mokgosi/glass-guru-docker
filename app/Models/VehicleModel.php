@@ -13,6 +13,6 @@ class VehicleModel extends Model
 
     public function make()
     {
-        return $this->belongsTo('App\Model\VehicleMake');
+        return $this->belongsTo('App\Models\VehicleMake');
     }
 }

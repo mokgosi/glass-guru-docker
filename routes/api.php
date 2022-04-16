@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\QRCodeController;
+use App\Http\Controllers\Api\VehicleController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,4 +31,4 @@ use App\Http\Controllers\Api\QRCodeController;
 
 Route::post('upload-qrcode-file', [QRCodeController::class, 'qrCodeUploader']);
 Route::post('decode-qrcode-file', [QRCodeController::class, 'qrCodeReader']);
-
+Route::get('get-vehicle-details', [VehicleController::class, 'getVehicelDetails']);

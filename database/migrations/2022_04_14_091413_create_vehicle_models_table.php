@@ -17,8 +17,8 @@ return new class extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('code');
-            $table->string('year');
-            $table->string('cost')->nullable();
+            $table->year('year');
+            $table->string('cost')->default('600.00');
             $table->integer('make_id')->unsigned()->index();
             $table->foreign('make_id')->references('id')->on('vehicle_makes');
             $table->timestamps();
