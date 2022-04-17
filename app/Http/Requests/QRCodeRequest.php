@@ -24,7 +24,7 @@ class QRCodeRequest extends FormRequest
     public function rules()
     {
         return [
-            'path' => 'required|mimes:png,jpg,jpeg,gif|max:2035',
+            'path' => 'required|file|mimes:png,jpg,jpeg,gif|max:2035',
         ];
     }
 }

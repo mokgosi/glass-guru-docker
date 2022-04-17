@@ -34,7 +34,7 @@ class QRCodeController extends Controller
 
     public function qrCodeUploader(QRCodeRequest $request): string
     {
-        if ($file = $request->file('path')) {
+        if ($file = $request->file('file')) {
             $path = $file->store('public/files');
             $name = $file->getClientOriginalName();
 

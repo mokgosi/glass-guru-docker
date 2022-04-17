@@ -10,6 +10,6 @@ class QrCode extends Model
     use HasFactory;
 
     protected $fillable = [
-        'path', 'name'
+        'file', 'name'
     ];
 }
