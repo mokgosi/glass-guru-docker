@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\QRCodeController;
-use App\Http\Controllers\Api\VehicleController;
+use App\Http\Controllers\Api\QuoteController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,9 +15,9 @@ use App\Http\Controllers\Api\VehicleController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
 // Route::group(['prefix' => 'auth'], function () {
 //      Route::post('login', 'Auth\AuthController@login')->name('login');
@@ -28,10 +28,14 @@ use App\Http\Controllers\Api\VehicleController;
 //    });
 // });
 
+// Route::group(['prefix' => 'v1'], function () {
+//     Route::group(['middleware' => 'auth:api'], function() {
+//         Route::post('upload-qrcode-file', [QRCodeController::class, 'qrCodeUploader']);
+//         Route::get('unsupported-vehicle-makes', [QRCodeController::class, 'checkIfVehicleMakeSupported']);
+//         Route::get('license-expired', [QRCodeController::class, 'checkIfLicenseExpired']);
+//         Route::get('get-vehicle-details', [QRCodeController::class, 'getAddionalVehicleDetails']);
+//     });
+// });
 
 Route::post('upload-qrcode-file', [QRCodeController::class, 'qrCodeUploader']);
-// Route::post('decode-qrcode-file', [QRCodeController::class, 'qrCodeReader']);
-Route::get('unsupported-vehicle-makes', [QRCodeController::class, 'checkIfVehicleMakeSupported']);
-Route::get('license-expired', [QRCodeController::class, 'checkIfLicenseExpired']);
-Route::get('get-vehicle-details', [QRCodeController::class, 'getVehicelDetails']);
-
+Route::post('confirm-quote', [QuoteController::class, 'confirmQuote']);

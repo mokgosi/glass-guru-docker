@@ -17,19 +17,16 @@ return new class extends Migration
             $table->id();
             $table->string('reference');
             $table->string('cost');
-            $table->string('store_name');
-            $table->string('store_phone');
-            $table->string('store_address');
+            $table->string('store_location');
             $table->string('client_name');
             $table->string('client_phone');
-            $table->string('client_email')->nullable();
-            $table->string('vihicle_vin');
-            $table->string('vihicle_make');
-            $table->string('vihicle_manufacturer');
-            $table->year('vihicle_year');
-            $table->string('vihicle_registration');
-            $table->date('vihicle_license_issue_date');
-            $table->date('vihicle_license_expiry_date');
+            $table->string('vin');
+            $table->string('make');
+            $table->string('model');
+            $table->year('year');
+            $table->string('registration');
+            $table->date('license_issue_date');
+            $table->date('license_expiry_date');
             $table->timestamps();
         });
     }

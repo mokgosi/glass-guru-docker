@@ -3,19 +3,18 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Libern\QRCodeReader\QRCodeReader;
 use App\Http\Requests\QRCodeRequest;
 use App\Models\QrCode; 
-use Zxing\QrReader;
-use Illuminate\Support\Facades\Storage;
-use Carbon\Carbon;
 use App\Models\VehicleModel;
 use App\Models\VehicleMake;
+use Illuminate\Support\Facades\Storage;
+use Zxing\QrReader;
+use Carbon\Carbon;
+
 
 class QRCodeController extends Controller
 {
-    public function qrCodeReader($path='')
+    public function qrCodeReader($path)
     {
         if(!empty($path)) {
             $path = Storage::path($path);
@@ -26,27 +25,35 @@ class QRCodeController extends Controller
             return response()->json([
                 "success" => true,
                 "text" => $text,
-                "additional" => ''
+                "additional" => '',
+                "reference" => random_int(10000000, 99999999)
             ]);
         }
         return response()->json(['error' => 'File upload failed..'], 401);
-
     }
 
-    public function qrCodeUploader(QRCodeRequest $request)
+    public function qrCodeUploader(QRCodeRequest $request): string
     {
         if ($file = $request->file('path')) {
             $path = $file->store('public/files');
             $name = $file->getClientOriginalName();
 
             $qrCodeDetails = $this->qrCodeReader($path);
-            $valid = $this->validateQRCodeDetails($qrCodeDetails);
+            $qrCodeDetails = $qrCodeDetails->getContent();
+            $decodeQrCodeDetails = json_decode($qrCodeDetails, true);
+            $pieces = explode(';', $decodeQrCodeDetails['text']);
+
+            $validated = $this->validateQRCodeDetails($pieces);
             
-            if(!is_bool(gettype($valid))) {
-                return $valid; //json formatt error response
+            if(!is_bool(gettype($validated))) {
+                echo 'not bool';
+                // return $validated;
+                // return $validated->getContent(); //json formatt error response
             } else {
                 //get full 
+                $this->getAddionalVehicleDetails($pieces[2]);
             }
+
             //store your file into directory and db
             $save = new QrCode();
             $save->name = $name;
@@ -58,53 +65,50 @@ class QRCodeController extends Controller
         return response()->json(['error' => 'File upload failed...'], 401);
     }
 
-    public function validateQRCodeDetails($qrCodeDetails)
+    public function validateQRCodeDetails(array $qrCodeDetails)
     {
-        $qrCodeDetails = json_decode($qrCodeDetails->getContent(), true);
-        $pieces = explode(';', $qrCodeDetails['text']);
-
         //check if license expired first
-        if($this->checkIfLicenseExpired($pieces[6])) {
+        if($this->licenseExpired($qrCodeDetails[6])) {
             return response()->json(['error' => 'License expired...'], 401);
         }
 
         //check year
-        if($pieces[3] < 2006) {
+        if($qrCodeDetails[3] < 2006) {
             return response()->json(['error' => "Models before 2006 - Not Supported..."], 401);
         }
 
         //check make supported
-        if($this->checkIfVehicleMakeSupported($pieces[1])) {
-            return response()->json(['error' => "Vehicle Make: {$pieces[1]} - Not Supported..."], 401);
+        if(!$this->makeSupported($qrCodeDetails[1])) {
+            return response()->json(['error' => "Vehicle Make: {$qrCodeDetails[1]} - Not Supported..."], 401);
         }
         return true;
     }
 
-    public function getAddionalVehicleDetails(Request $request)
+    public function getAddionalVehicleDetails(string $model)
     {
-        $model = $request->get('model');
-        $vehicle = VehicleModel::with('make')->where('name', $model)->first();
+        // $model = $request->get('model');
+        $vehicle = VehicleModel::select('code','cost')
+            ->where('name', $model)
+            ->first();
         return $vehicle;
     }
 
-    public function checkIfLicenseExpired($expiryDate): bool
+    public function licenseExpired($expiryDate): bool
     {
-        if(Carbon::now() > Carbon::parse($expiryDate) ) {
-            return true;
+        if(Carbon::now() < Carbon::parse($expiryDate) ) {
+            return false;
         } 
-        
-        return false;
+        return true;
     }
 
-    public function checkIfVehicleMakeSupported($make): bool
+    public function makeSupported($make): bool
     {
-        // $make = $request->get('make'); //have to check make case-sensetive
-
         $unsupported = VehicleMake::where('supported', 0)->pluck('name')->toArray();
-        
         if(in_array($make, $unsupported)) {
             return false;
         }
         return true;
     }
+
 }
+ 

@@ -12,18 +12,15 @@ class Quote extends Model
     protected $fillable = [
         'reference',
         'cost',
-        'store_name',
-        'store_phone',
-        'store_address',
+        'store_location',
         'client_name',
         'client_phone',
-        'client_email',
-        'vihicle_vin',
-        'vihicle_make',
-        'vihicle_manufacturer',
-        'vihicle_year',
-        'vihicle_registration',
-        'vihicle_license_issue_date',
-        'vihicle_license_expiry_date'
+        'vin',
+        'make',
+        'model',
+        'year',
+        'registration',
+        'license_issue_date',
+        'license_expiry_date'
     ];
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\OAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,7 @@ Route::get('/dashboard', function (Request $request) {
         'clients' => $request->user()->clients,
     ]);
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/callback',  [OAuthController::class, 'callback']);
 
 require __DIR__.'/auth.php';

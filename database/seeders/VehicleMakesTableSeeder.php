@@ -44,7 +44,7 @@ class VehicleMakesTableSeeder extends Seeder
           array('id' =>25 , 'name' => 'GMC' ,'code' => 'GMC', 'supported' => 1),
           array('id' =>26 , 'name' => 'Honda' ,'code' => 'HONDA', 'supported' => 1),
           array('id' =>27 , 'name' => 'HUMMER' ,'code' => 'AMGEN', 'supported' => 1),
-          array('id' =>28 , 'name' => 'Hyundai' ,'code' => 'HYUND', 'supported' => 1),
+          array('id' =>28 , 'name' => 'Hyundia' ,'code' => 'HYUND', 'supported' => 1),
           array('id' =>29 , 'name' => 'Infiniti' ,'code' => 'INFIN', 'supported' => 1),
           array('id' =>30 , 'name' => 'Isuzu' ,'code' => 'ISU', 'supported' => 1),
           array('id' =>31 , 'name' => 'Jaguar' ,'code' => 'JAG', 'supported' => 1),
