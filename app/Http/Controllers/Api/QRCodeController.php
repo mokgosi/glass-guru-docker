@@ -43,29 +43,30 @@ class QRCodeController extends Controller
             $decodeQrCodeDetails = json_decode($qrCodeDetails, true);
             $pieces = explode(';', $decodeQrCodeDetails['text']);
 
-            $validated = $this->validateQRCodeDetails($pieces);
-            
-            if(!is_bool(gettype($validated))) {
-                echo 'not bool';
-                // return $validated;
-                // return $validated->getContent(); //json formatt error response
-            } else {
+            $validated = $this->validateQRCode($pieces);
+
+            if($validated === true) {
                 //get full 
-                $this->getAddionalVehicleDetails($pieces[2]);
+                $addistional = $this->getAddionalVehicleDetails($pieces[2]);
+                $qrCodeDetails = json_decode($qrCodeDetails, true);
+                $qrCodeDetails['additional'] = $addistional;
+                $qrCodeDetails = json_encode($qrCodeDetails);
+            } else {
+                return $validated->getContent();
             }
 
             //store your file into directory and db
-            $save = new QrCode();
-            $save->name = $name;
-            $save->path = $path;
-            $save->save();
+            $qrCode = new QrCode();
+            $qrCode->name = $name;
+            $qrCode->file = $path;
+            $qrCode->save();
 
             return $qrCodeDetails;
         }
         return response()->json(['error' => 'File upload failed...'], 401);
     }
 
-    public function validateQRCodeDetails(array $qrCodeDetails)
+    public function validateQRCode(array $qrCodeDetails)
     {
         //check if license expired first
         if($this->licenseExpired($qrCodeDetails[6])) {
@@ -73,7 +74,7 @@ class QRCodeController extends Controller
         }
 
         //check year
-        if($qrCodeDetails[3] < 2006) {
+        if((int)$qrCodeDetails[3] < 2006) {
             return response()->json(['error' => "Models before 2006 - Not Supported..."], 401);
         }
 
@@ -95,7 +96,7 @@ class QRCodeController extends Controller
 
     public function licenseExpired($expiryDate): bool
     {
-        if(Carbon::now() < Carbon::parse($expiryDate) ) {
+        if(Carbon::now() < Carbon::parse($expiryDate)) {
             return false;
         } 
         return true;
@@ -109,6 +110,5 @@ class QRCodeController extends Controller
         }
         return true;
     }
-
 }
  
