@@ -29,7 +29,7 @@ class QuoteRequest extends FormRequest
             'store_location' => 'required',
 
             'client_name' => 'required|max:100',
-            'client_phone' => 'required|numeric|digits:10',
+            'client_phone' => ['required','regex:/^(\+27|0)[6-8][0-9]{8}$/'], //use array to avoid ending delimiter error
 
             'vin' => 'required|alpha_num|min:17|max:17',
             'make' => 'required|max:50',
