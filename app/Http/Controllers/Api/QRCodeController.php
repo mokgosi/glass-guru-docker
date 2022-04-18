@@ -40,47 +40,52 @@ class QRCodeController extends Controller
 
             $qrCodeDetails = $this->qrCodeReader($path);
             $qrCodeDetails = $qrCodeDetails->getContent();
+
             $decodeQrCodeDetails = json_decode($qrCodeDetails, true);
             $pieces = explode(';', $decodeQrCodeDetails['text']);
 
             $validated = $this->validateQRCode($pieces);
 
             if($validated === true) {
-                //get full 
-                $addistional = $this->getAddionalVehicleDetails($pieces[2]);
-                $qrCodeDetails = json_decode($qrCodeDetails, true);
-                $qrCodeDetails['additional'] = $addistional;
-                $qrCodeDetails = json_encode($qrCodeDetails);
+                $qrCodeDetails = $this->persisitQrCode($qrCodeDetails, $path, $name ,$pieces[2]);
             } else {
                 return $validated->getContent();
             }
-
-            //store your file into directory and db
-            $qrCode = new QrCode();
-            $qrCode->name = $name;
-            $qrCode->file = $path;
-            $qrCode->save();
 
             return $qrCodeDetails;
         }
         return response()->json(['error' => 'File upload failed...'], 401);
     }
 
+    public function persisitQrCode(string $qrCodeDetails, string $path, string $name ,string $model) 
+    {
+        
+        $addistional = $this->getAddionalVehicleDetails($model);
+        $qrCodeDetails = json_decode($qrCodeDetails, true);
+        $qrCodeDetails['additional'] = $addistional;
+        $qrCodeDetails = json_encode($qrCodeDetails);
+        
+        $qrCode = new QrCode();
+        $qrCode->name = $name;
+        $qrCode->file = $path;
+        $qrCode->save();
+
+        return $qrCodeDetails;
+    }
+
     public function validateQRCode(array $qrCodeDetails)
     {
-        //check if license expired first
         if($this->licenseExpired($qrCodeDetails[6])) {
             return response()->json(['error' => 'License expired...'], 401);
         }
 
-        //check year
-        if((int)$qrCodeDetails[3] < 2006) {
-            return response()->json(['error' => "Models before 2006 - Not Supported..."], 401);
+        //check year - set in .env
+        if((int)$qrCodeDetails[3] < (int)env('VEHICLE_SUPPORT_FROM_YEAR')) {
+            return response()->json(['error' => "Vehicle Models before ".env('VEHICLE_SUPPORT_FROM_YEAR')." - Not Supported..."], 401);
         }
 
-        //check make supported
         if(!$this->makeSupported($qrCodeDetails[1])) {
-            return response()->json(['error' => "Vehicle Make: {$qrCodeDetails[1]} - Not Supported..."], 401);
+            return response()->json(['error' => "Vehicle Makes: {$qrCodeDetails[1]} - Not Supported..."], 401);
         }
         return true;
     }

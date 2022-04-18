@@ -1,11 +1,8 @@
 <?php
-
 namespace Database\Seeders;
-
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
 class VehicleModelsTableSeeder extends Seeder
 {
   /**
@@ -15,7 +12,6 @@ class VehicleModelsTableSeeder extends Seeder
   */
   public function run()
   {
-    
     DB::table('vehicle_models')->delete();
     $models1 = array(
       array('id' =>1, 'make_id' =>1, 'code' => 'CL_MODELS', 'name' => 'CL Models (4)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
@@ -676,1328 +672,668 @@ class VehicleModelsTableSeeder extends Seeder
       array('id' =>656, 'make_id' =>33, 'code' =>'SEPHIA', 'name' =>'Sephia','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
       array('id' =>657, 'make_id' =>33, 'code' =>'SORENTO', 'name' =>'Sorento','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
       array('id' =>658, 'make_id' =>33, 'code' =>'SOUL','name' => 'Soul','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>659, 'make_id' =>33, 'code' =>'SPECTRA', 'name' =>'Spectra','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>660, 'make_id' =>33, 'code' =>'SPECTRA5', 'name' =>'Spectra5','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>661, 'make_id' =>33, 'code' =>'SPORTA', 'name' =>'Sportage','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>662, 'make_id' =>33, 'code' =>'KIAOTH', 'name' =>'Other Kia Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>663, 'make_id' =>34, 'code' =>'AVENT', 'name' =>'Aventador','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>664, 'make_id' =>34, 'code' =>'COUNT', 'name' =>'Countach','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>665, 'make_id' =>34, 'code' =>'DIABLO', 'name' =>'Diablo','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>666, 'make_id' =>34, 'code' =>'GALLARDO','name' => 'Gallardo','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>667, 'make_id' =>34, 'code' =>'JALPA', 'name' =>'Jalpa','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>668, 'make_id' =>34, 'code' =>'LM002', 'name' =>'LM002','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>669, 'make_id' =>34, 'code' =>'MURCIELAGO','name' => 'Murcielago','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>670, 'make_id' =>34, 'code' =>'UNAVAILLAM', 'name' =>'Other Lamborghini Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>671, 'make_id' =>35, 'code' =>'BETA','name' => 'Beta','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>672, 'make_id' =>35, 'code' =>'ZAGATO','name' => 'Zagato','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>673, 'make_id' =>35, 'code' =>'UNAVAILLAN', 'name' =>'Other Lancia Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>674, 'make_id' =>36, 'code' =>'DEFEND', 'name' =>'Defender','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>675, 'make_id' =>36, 'code' =>'DISCOV', 'name' =>'Discovery','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>676, 'make_id' =>36, 'code' =>'FRELNDR','name' => 'Freelander','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>677, 'make_id' =>36, 'code' =>'LR2', 'name' =>'LR2','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>678, 'make_id' =>36, 'code' =>'LR3','name' => 'LR3','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>679, 'make_id' =>36, 'code' =>'LR4','name' => 'LR4','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>680, 'make_id' =>36, 'code' =>'RANGE','name' => 'Range Rover','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>681, 'make_id' =>36, 'code' =>'EVOQUE', 'name' =>'Range Rover Evoque','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>682, 'make_id' =>36, 'code' =>'RANGESPORT', 'name' =>'Range Rover Sport','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>683, 'make_id' =>36, 'code' =>'ROVOTH', 'name' =>'Other Land Rover Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>684, 'make_id' =>37, 'code' =>'CT_MODELS','name' => 'CT Models (1)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>685, 'make_id' =>37, 'code' =>'CT200H','name' => ' - CT 200h','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>686, 'make_id' =>37, 'code' =>'ES_MODELS', 'name' =>'ES Models (5)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>687, 'make_id' =>37, 'code' =>'ES250', 'name' =>' - ES 250','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>688, 'make_id' =>37, 'code' =>'ES300', 'name' =>' - ES 300','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>689, 'make_id' =>37, 'code' =>'ES300H','name' => ' - ES 300h','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>690, 'make_id' =>37, 'code' =>'ES330','name' => ' - ES 330','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>691, 'make_id' =>37, 'code' =>'ES350','name' => ' - ES 350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>692, 'make_id' =>37, 'code' =>'GS_MODELS','name' => 'GS Models (6)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>693, 'make_id' =>37, 'code' =>'GS300','name' => ' - GS 300','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>694, 'make_id' =>37, 'code' =>'GS350', 'name' =>' - GS 350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>695, 'make_id' =>37, 'code' =>'GS400','name' => ' - GS 400','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>696, 'make_id' =>37, 'code' =>'GS430', 'name' =>' - GS 430','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>697, 'make_id' =>37, 'code' =>'GS450H','name' => ' - GS 450h','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>698, 'make_id' =>37, 'code' =>'GS460', 'name' =>' - GS 460','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>699, 'make_id' =>37, 'code' =>'GX_MODELS', 'name' =>'GX Models (2)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>700, 'make_id' =>37, 'code' =>'GX460','name' => ' - GX 460','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>701, 'make_id' =>37, 'code' =>'GX470', 'name' =>' - GX 470','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>702, 'make_id' =>37, 'code' =>'HS_MODELS', 'name' =>'HS Models (1)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>703, 'make_id' =>37, 'code' =>'HS250H','name' => ' - HS 250h','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>704, 'make_id' =>37, 'code' =>'IS_MODELS','name' => 'IS Models (6)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>705, 'make_id' =>37, 'code' =>'IS250', 'name' =>' - IS 250','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>706, 'make_id' =>37, 'code' =>'IS250C', 'name' =>' - IS 250C','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>707, 'make_id' =>37, 'code' =>'IS300', 'name' =>' - IS 300','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>708, 'make_id' =>37, 'code' =>'IS350','name' => ' - IS 350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>709, 'make_id' =>37, 'code' =>'IS350C', 'name' =>' - IS 350C','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>710, 'make_id' =>37, 'code' =>'ISF', 'name' =>' - IS F','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>711, 'make_id' =>37, 'code' =>'LEXLFA', 'name' =>'LFA','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>712, 'make_id' =>37, 'code' =>'LS_MODELS','name' => 'LS Models (4)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>713, 'make_id' =>37, 'code' =>'LS400', 'name' =>' - LS 400','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>714, 'make_id' =>37, 'code' =>'LS430', 'name' =>' - LS 430','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>715, 'make_id' =>37, 'code' =>'LS460', 'name' =>' - LS 460','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>716, 'make_id' =>37, 'code' =>'LS600H', 'name' =>' - LS 600h','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>717, 'make_id' =>37, 'code' =>'LX_MODELS','name' => 'LX Models (3)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>718, 'make_id' =>37, 'code' =>'LX450', 'name' =>' - LX 450','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>719, 'make_id' =>37, 'code' =>'LX470', 'name' =>' - LX 470','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>720, 'make_id' =>37, 'code' =>'LX570', 'name' =>' - LX 570','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>721, 'make_id' =>37, 'code' =>'RX_MODELS', 'name' =>'RX Models (5)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>722, 'make_id' =>37, 'code' =>'RX300', 'name' =>' - RX 300','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>723, 'make_id' =>37, 'code' =>'RX330', 'name' =>' - RX 330','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>724, 'make_id' =>37, 'code' =>'RX350', 'name' =>' - RX 350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>725, 'make_id' =>37, 'code' =>'RX400H','name' => ' - RX 400h','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>726, 'make_id' =>37, 'code' =>'RX450H', 'name' =>' - RX 450h','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>727, 'make_id' =>37, 'code' =>'SC_MODELS','name' => 'SC Models (3)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>728, 'make_id' =>37, 'code' =>'SC300','name' => ' - SC 300','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>729, 'make_id' =>37, 'code' =>'SC400', 'name' =>' - SC 400','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>730, 'make_id' =>37, 'code' =>'SC430', 'name' =>' - SC 430','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>731, 'make_id' =>37, 'code' =>'LEXOTH', 'name' =>'Other Lexus Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>732, 'make_id' =>38, 'code' =>'AVIATOR','name' => 'Aviator','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>733, 'make_id' =>38, 'code' =>'BLKWOOD','name' => 'Blackwood','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>734, 'make_id' =>38, 'code' =>'CONT','name' => 'Continental','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>735, 'make_id' =>38, 'code' =>'LSLINCOLN', 'name' =>'LS','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>736, 'make_id' =>38, 'code' =>'MARKLT','name' => 'Mark LT','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>737, 'make_id' =>38, 'code' =>'MARK6', 'name' =>'Mark VI','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>738, 'make_id' =>38, 'code' =>'MARK7','name' => 'Mark VII','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>739, 'make_id' =>38, 'code' =>'MARK8', 'name' =>'Mark VIII','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>740, 'make_id' =>38, 'code' =>'MKS', 'name' =>'MKS','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>741, 'make_id' =>38, 'code' =>'MKT', 'name' =>'MKT','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>742, 'make_id' =>38, 'code' =>'MKX', 'name' =>'MKX','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>743, 'make_id' =>38, 'code' =>'MKZ', 'name' =>'MKZ','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>744, 'make_id' =>38, 'code' =>'NAVIGA','name' => 'Navigator','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>745, 'make_id' =>38, 'code' =>'NAVIGAL', 'name' =>'Navigator L','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>746, 'make_id' =>38, 'code' =>'LINCTC', 'name' =>'Town Car','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>747, 'make_id' =>38, 'code' =>'ZEPHYR','name' => 'Zephyr','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>748, 'make_id' =>38, 'code' =>'LINOTH','name' => 'Other Lincoln Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>749, 'make_id' =>39, 'code' =>'ELAN','name' => 'Elan','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>750, 'make_id' =>39, 'code' =>'LOTELISE','name' => 'Elise','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>751, 'make_id' =>39, 'code' =>'ESPRIT', 'name' =>'Esprit','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>752, 'make_id' =>39, 'code' =>'EVORA', 'name' =>'Evora','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>753, 'make_id' =>39, 'code' =>'EXIGE', 'name' =>'Exige','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>754, 'make_id' =>39, 'code' =>'UNAVAILLOT', 'name' =>'Other Lotus Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>755, 'make_id' =>40, 'code' =>'430','name' => '430','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>756, 'make_id' =>40, 'code' =>'BITRBO','name' => 'Biturbo','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>757, 'make_id' =>40, 'code' =>'COUPEMAS','name' => 'Coupe','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>758, 'make_id' =>40, 'code' =>'GRANSPORT', 'name' =>'GranSport','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>759, 'make_id' =>40, 'code' =>'GRANTURISM', 'name' =>'GranTurismo','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>760, 'make_id' =>40, 'code' =>'QP','name' => 'Quattroporte','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>761, 'make_id' =>40, 'code' =>'SPYDER','name' => 'Spyder','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>762, 'make_id' =>40, 'code' =>'UNAVAILMAS','name' => 'Other Maserati Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>763, 'make_id' =>41, 'code' =>'57MAYBACH', 'name' =>'57','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>764, 'make_id' =>41, 'code' =>'62MAYBACH', 'name' =>'62','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>765, 'make_id' =>41, 'code' =>'UNAVAILMAY','name' => 'Other Maybach Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>766, 'make_id' =>42, 'code' =>'MAZDA323','name' => '323','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>767, 'make_id' =>42, 'code' =>'MAZDA626', 'name' =>'626','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>768, 'make_id' =>42, 'code' =>'929','name' => '929','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>769, 'make_id' =>42, 'code' =>'B-SERIES','name' => 'B-Series Pickup','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>770, 'make_id' =>42, 'code' =>'CX-5', 'name' =>'CX-5','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>771, 'make_id' =>42, 'code' =>'CX-7', 'name' =>'CX-7','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>772, 'make_id' =>42, 'code' =>'CX-9', 'name' =>'CX-9','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>773, 'make_id' =>42, 'code' =>'GLC','name' => 'GLC','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>774, 'make_id' =>42, 'code' =>'MAZDA2', 'name' =>'MAZDA2','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>775, 'make_id' =>42, 'code' =>'MAZDA3', 'name' =>'MAZDA3','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>776, 'make_id' =>42, 'code' =>'MAZDA5', 'name' =>'MAZDA5','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>777, 'make_id' =>42, 'code' =>'MAZDA6', 'name' =>'MAZDA6','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>778, 'make_id' =>42, 'code' =>'MAZDASPD3', 'name' =>'MAZDASPEED3','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>779, 'make_id' =>42, 'code' =>'MAZDASPD6', 'name' =>'MAZDASPEED6','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>780, 'make_id' =>42, 'code' =>'MIATA', 'name' =>'Miata MX5','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>781, 'make_id' =>42, 'code' =>'MILL','name' => 'Millenia','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>782, 'make_id' =>42, 'code' =>'MPV', 'name' =>'MPV','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>783, 'make_id' =>42, 'code' =>'MX3', 'name' =>'MX3','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>784, 'make_id' =>42, 'code' =>'MX6','name' => 'MX6','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>785, 'make_id' =>42, 'code' =>'NAVAJO','name' => 'Navajo','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>786, 'make_id' =>42, 'code' =>'PROTE', 'name' =>'Protege','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>787, 'make_id' =>42, 'code' =>'PROTE5', 'name' =>'Protege5','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>788, 'make_id' =>42, 'code' =>'RX7','name' => 'RX-7','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>789, 'make_id' =>42, 'code' =>'RX8','name' => 'RX-8','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>790, 'make_id' =>42, 'code' =>'TRIBUTE', 'name' =>'Tribute','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>791, 'make_id' =>42, 'code' =>'MAZOTH','name' => 'Other Mazda Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>792, 'make_id' =>43, 'code' =>'MP4', 'name' =>'MP4-12C','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>793, 'make_id' =>44, 'code' =>'190_CLASS', 'name' =>'190 Class (2)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>794, 'make_id' =>44, 'code' =>'190D', 'name' =>'190D','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>795, 'make_id' =>44, 'code' =>'190E', 'name' =>'190E','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>796, 'make_id' =>44, 'code' =>'240_CLASS','name' => '240 Class (1)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>797, 'make_id' =>44, 'code' =>'240D', 'name' =>'240D','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>798, 'make_id' =>44, 'code' =>'300_CLASS_E_CLASS', 'name' =>'300 Class / E Class (6)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>799, 'make_id' =>44, 'code' =>'300CD', 'name' =>'300CD','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>800, 'make_id' =>44, 'code' =>'300CE','name' => '300CE','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>801, 'make_id' =>44, 'code' =>'300D','name' => '300D','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>802, 'make_id' =>44, 'code' =>'300E', 'name' =>'300E','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>803, 'make_id' =>44, 'code' =>'300TD', 'name' =>'300TD','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>804, 'make_id' =>44, 'code' =>'300TE','name' => '300TE','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>805, 'make_id' =>44, 'code' =>'C_CLASS', 'name' =>'C Class (13)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>806, 'make_id' =>44, 'code' =>'C220', 'name' =>'C220','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>807, 'make_id' =>44, 'code' =>'C230', 'name' =>'C230','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>808, 'make_id' =>44, 'code' =>'C240', 'name' =>'C240','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>809, 'make_id' =>44, 'code' =>'C250','name' => 'C250','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>810, 'make_id' =>44, 'code' =>'C280','name' => 'C280','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>811, 'make_id' =>44, 'code' =>'C300','name' => 'C300','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>812, 'make_id' =>44, 'code' =>'C320', 'name' =>'C320','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>813, 'make_id' =>44, 'code' =>'C32AMG', 'name' =>'C32 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>814, 'make_id' =>44, 'code' =>'C350', 'name' =>'C350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>815, 'make_id' =>44, 'code' =>'C36AMG', 'name' =>'C36 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>816, 'make_id' =>44, 'code' =>'C43AMG', 'name' =>'C43 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>817, 'make_id' =>44, 'code' =>'C55AMG', 'name' =>'C55 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>818, 'make_id' =>44, 'code' =>'C63AMG', 'name' =>'C63 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>819, 'make_id' =>44, 'code' =>'CL_CLASS', 'name' =>'CL Class (6)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>820, 'make_id' =>44, 'code' =>'CL500', 'name' =>'CL500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>821, 'make_id' =>44, 'code' =>'CL550', 'name' =>'CL550','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>822, 'make_id' =>44, 'code' =>'CL55AMG', 'name' =>'CL55 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>823, 'make_id' =>44, 'code' =>'CL600', 'name' =>'CL600','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>824, 'make_id' =>44, 'code' =>'CL63AMG','name' => 'CL63 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>825, 'make_id' =>44, 'code' =>'CL65AMG', 'name' =>'CL65 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>826, 'make_id' =>44, 'code' =>'CLK_CLASS','name' => 'CLK Class (7)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>827, 'make_id' =>44, 'code' =>'CLK320', 'name' =>'CLK320','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>828, 'make_id' =>44, 'code' =>'CLK350', 'name' =>'CLK350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>829, 'make_id' =>44, 'code' =>'CLK430', 'name' =>'CLK430','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>830, 'make_id' =>44, 'code' =>'CLK500', 'name' =>'CLK500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>831, 'make_id' =>44, 'code' =>'CLK550', 'name' =>'CLK550','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>832, 'make_id' =>44, 'code' =>'CLK55AMG', 'name' =>'CLK55 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>833, 'make_id' =>44, 'code' =>'CLK63AMG', 'name' =>'CLK63 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>834, 'make_id' =>44, 'code' =>'CLS_CLASS','name' => 'CLS Class (4)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>835, 'make_id' =>44, 'code' =>'CLS500', 'name' =>'CLS500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>836, 'make_id' =>44, 'code' =>'CLS550','name' => 'CLS550','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>837, 'make_id' =>44, 'code' =>'CLS55AMG','name' => 'CLS55 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>838, 'make_id' =>44, 'code' =>'CLS63AMG','name' => 'CLS63 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>839, 'make_id' =>44, 'code' =>'E_CLASS','name' => 'E Class (18)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>840, 'make_id' =>44, 'code' =>'260E','name' => '260E','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>841, 'make_id' =>44, 'code' =>'280CE', 'name' =>'280CE','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>842, 'make_id' =>44, 'code' =>'280E', 'name' =>'280E','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>843, 'make_id' =>44, 'code' =>'400E','name' => '400E','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>844, 'make_id' =>44, 'code' =>'500E', 'name' =>'500E','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>845, 'make_id' =>44, 'code' =>'E300','name' => 'E300','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>846, 'make_id' =>44, 'code' =>'E320', 'name' =>'E320','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>847, 'make_id' =>44, 'code' =>'E320BLUE','name' => 'E320 Bluetec','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>848, 'make_id' =>44, 'code' =>'E320CDI', 'name' =>'E320 CDI','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>849, 'make_id' =>44, 'code' =>'E350', 'name' =>'E350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>850, 'make_id' =>44, 'code' =>'E350BLUE', 'name' =>'E350 Bluetec','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>851, 'make_id' =>44, 'code' =>'E400', 'name' =>'E400 Hybrid','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>852, 'make_id' =>44, 'code' =>'E420', 'name' =>'E420','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>853, 'make_id' =>44, 'code' =>'E430', 'name' =>'E430','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>854, 'make_id' =>44, 'code' =>'E500', 'name' =>'E500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>855, 'make_id' =>44, 'code' =>'E550', 'name' =>'E550','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>856, 'make_id' =>44, 'code' =>'E55AMG', 'name' =>'E55 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>857, 'make_id' =>44, 'code' =>'E63AMG','name' => 'E63 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>858, 'make_id' =>44, 'code' =>'G_CLASS','name' => 'G Class (4)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>859, 'make_id' =>44, 'code' =>'G500', 'name' =>'G500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>860, 'make_id' =>44, 'code' =>'G550', 'name' =>'G550','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>861, 'make_id' =>44, 'code' =>'G55AMG', 'name' =>'G55 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>862, 'make_id' =>44, 'code' =>'G63AMG', 'name' =>'G63 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>863, 'make_id' =>44, 'code' =>'GL_CLASS','name' => 'GL Class (5)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>864, 'make_id' =>44, 'code' =>'GL320BLUE', 'name' =>'GL320 Bluetec','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>865, 'make_id' =>44, 'code' =>'GL320CDI', 'name' =>'GL320 CDI','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>866, 'make_id' =>44, 'code' =>'GL350BLUE','name' => 'GL350 Bluetec','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>867, 'make_id' =>44, 'code' =>'GL450', 'name' =>'GL450','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>868, 'make_id' =>44, 'code' =>'GL550','name' => 'GL550','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>869, 'make_id' =>44, 'code' =>'GLK_CLASS', 'name' =>'GLK Class (1)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>870, 'make_id' =>44, 'code' =>'GLK350', 'name' =>'GLK350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>871, 'make_id' =>44, 'code' =>'M_CLASS','name' => 'M Class (11)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>872, 'make_id' =>44, 'code' =>'ML320', 'name' =>'ML320','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>873, 'make_id' =>44, 'code' =>'ML320BLUE', 'name' =>'ML320 Bluetec','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>874, 'make_id' =>44, 'code' =>'ML320CDI', 'name' =>'ML320 CDI','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>875, 'make_id' =>44, 'code' =>'ML350','name' => 'ML350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>876, 'make_id' =>44, 'code' =>'ML350BLUE','name' => 'ML350 Bluetec','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>877, 'make_id' =>44, 'code' =>'ML430', 'name' =>'ML430','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>878, 'make_id' =>44, 'code' =>'ML450HY', 'name' =>'ML450 Hybrid','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>879, 'make_id' =>44, 'code' =>'ML500', 'name' =>'ML500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>880, 'make_id' =>44, 'code' =>'ML550', 'name' =>'ML550','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>881, 'make_id' =>44, 'code' =>'ML55AMG', 'name' =>'ML55 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>882, 'make_id' =>44, 'code' =>'ML63AMG', 'name' =>'ML63 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>883, 'make_id' =>44, 'code' =>'R_CLASS', 'name' =>'R Class (6)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>884, 'make_id' =>44, 'code' =>'R320BLUE','name' => 'R320 Bluetec','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>885, 'make_id' =>44, 'code' =>'R320CDI', 'name' =>'R320 CDI','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>886, 'make_id' =>44, 'code' =>'R350', 'name' =>'R350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>887, 'make_id' =>44, 'code' =>'R350BLUE', 'name' =>'R350 Bluetec','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>888, 'make_id' =>44, 'code' =>'R500', 'name' =>'R500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>889, 'make_id' =>44, 'code' =>'R63AMG', 'name' =>'R63 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>890, 'make_id' =>44, 'code' =>'S_CLASS', 'name' =>'S Class (30)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>891, 'make_id' =>44, 'code' =>'300SD', 'name' =>'300SD','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>892, 'make_id' =>44, 'code' =>'300SDL', 'name' =>'300SDL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>893, 'make_id' =>44, 'code' =>'300SE', 'name' =>'300SE','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>894, 'make_id' =>44, 'code' =>'300SEL','name' => '300SEL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>895, 'make_id' =>44, 'code' =>'350SD', 'name' =>'350SD','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>896, 'make_id' =>44, 'code' =>'350SDL','name' => '350SDL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>897, 'make_id' =>44, 'code' =>'380SE', 'name' =>'380SE','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>898, 'make_id' =>44, 'code' =>'380SEC','name' => '380SEC','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>899, 'make_id' =>44, 'code' =>'380SEL', 'name' =>'380SEL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>900, 'make_id' =>44, 'code' =>'400SE', 'name' =>'400SE','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>901, 'make_id' =>44, 'code' =>'400SEL', 'name' =>'400SEL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>902, 'make_id' =>44, 'code' =>'420SEL', 'name' =>'420SEL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>903, 'make_id' =>44, 'code' =>'500SEC', 'name' =>'500SEC','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>904, 'make_id' =>44, 'code' =>'500SEL', 'name' =>'500SEL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>905, 'make_id' =>44, 'code' =>'560SEC', 'name' =>'560SEC','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>906, 'make_id' =>44, 'code' =>'560SEL', 'name' =>'560SEL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>907, 'make_id' =>44, 'code' =>'600SEC','name' => '600SEC','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>908, 'make_id' =>44, 'code' =>'600SEL', 'name' =>'600SEL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>909, 'make_id' =>44, 'code' =>'S320', 'name' =>'S320','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>910, 'make_id' =>44, 'code' =>'S350', 'name' =>'S350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>911, 'make_id' =>44, 'code' =>'S350BLUE', 'name' =>'S350 Bluetec','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>912, 'make_id' =>44, 'code' =>'S400HY', 'name' =>'S400 Hybrid','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>913, 'make_id' =>44, 'code' =>'S420', 'name' =>'S420','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>914, 'make_id' =>44, 'code' =>'S430', 'name' =>'S430','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>915, 'make_id' =>44, 'code' =>'S500', 'name' =>'S500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>916, 'make_id' =>44, 'code' =>'S550', 'name' =>'S550','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>917, 'make_id' =>44, 'code' =>'S55AMG','name' => 'S55 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>918, 'make_id' =>44, 'code' =>'S600', 'name' =>'S600','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>919, 'make_id' =>44, 'code' =>'S63AMG', 'name' =>'S63 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>920, 'make_id' =>44, 'code' =>'S65AMG', 'name' =>'S65 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>921, 'make_id' =>44, 'code' =>'SL_CLASS', 'name' =>'SL Class (13)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>922, 'make_id' =>44, 'code' =>'300SL','name' => '300SL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>923, 'make_id' =>44, 'code' =>'380SL', 'name' =>'380SL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>924, 'make_id' =>44, 'code' =>'380SLC', 'name' =>'380SLC','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>925, 'make_id' =>44, 'code' =>'500SL', 'name' =>'500SL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>926, 'make_id' =>44, 'code' =>'560SL', 'name' =>'560SL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>927, 'make_id' =>44, 'code' =>'600SL', 'name' =>'600SL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>928, 'make_id' =>44, 'code' =>'SL320','name' => 'SL320','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>929, 'make_id' =>44, 'code' =>'SL500','name' => 'SL500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>930, 'make_id' =>44, 'code' =>'SL550','name' => 'SL550','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>931, 'make_id' =>44, 'code' =>'SL55AMG','name' => 'SL55 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>932, 'make_id' =>44, 'code' =>'SL600', 'name' =>'SL600','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>933, 'make_id' =>44, 'code' =>'SL63AMG', 'name' =>'SL63 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>934, 'make_id' =>44, 'code' =>'SL65AMG', 'name' =>'SL65 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>935, 'make_id' =>44, 'code' =>'SLK_CLASS','name' => 'SLK Class (8)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>936, 'make_id' =>44, 'code' =>'SLK230', 'name' =>'SLK230','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>937, 'make_id' =>44, 'code' =>'SLK250', 'name' =>'SLK250','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>938, 'make_id' =>44, 'code' =>'SLK280', 'name' =>'SLK280','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>939, 'make_id' =>44, 'code' =>'SLK300', 'name' =>'SLK300','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>940, 'make_id' =>44, 'code' =>'SLK320', 'name' =>'SLK320','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>941, 'make_id' =>44, 'code' =>'SLK32AMG','name' => 'SLK32 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>942, 'make_id' =>44, 'code' =>'SLK350','name' => 'SLK350','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>943, 'make_id' =>44, 'code' =>'SLK55AMG', 'name' =>'SLK55 AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>944, 'make_id' =>44, 'code' =>'SLR_CLASS','name' => 'SLR Class (1)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>945, 'make_id' =>44, 'code' =>'SLR','name' => 'SLR','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>946, 'make_id' =>44, 'code' =>'SLS_CLASS', 'name' =>'SLS Class (1)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>947, 'make_id' =>44, 'code' =>'SLSAMG', 'name' =>'SLS AMG','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>948, 'make_id' =>44, 'code' =>'SPRINTER_CLASS', 'name' =>'Sprinter Class (1)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>949, 'make_id' =>44, 'code' =>'MBSPRINTER', 'name' =>'Sprinter','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>950, 'make_id' =>44, 'code' =>'MBOTH','name' => 'Other Mercedes-Benz Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>951, 'make_id' =>45, 'code' =>'CAPRI', 'name' =>'Capri','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>952, 'make_id' =>45, 'code' =>'COUGAR', 'name' =>'Cougar','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>953, 'make_id' =>45, 'code' =>'MERCGRAND','name' => 'Grand Marquis','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>954, 'make_id' =>45, 'code' =>'LYNX', 'name' =>'Lynx','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>955, 'make_id' =>45, 'code' =>'MARAUDER', 'name' =>'Marauder','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>956, 'make_id' =>45, 'code' =>'MARINER', 'name' =>'Mariner','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>957, 'make_id' =>45, 'code' =>'MARQ', 'name' =>'Marquis','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>958, 'make_id' =>45, 'code' =>'MILAN', 'name' =>'Milan','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>959, 'make_id' =>45, 'code' =>'MONTEGO','name' => 'Montego','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>960, 'make_id' =>45, 'code' =>'MONTEREY','name' => 'Monterey','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>961, 'make_id' =>45, 'code' =>'MOUNTA', 'name' =>'Mountaineer','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>962, 'make_id' =>45, 'code' =>'MYSTIQ','name' => 'Mystique','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>963, 'make_id' =>45, 'code' =>'SABLE', 'name' =>'Sable','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>964, 'make_id' =>45, 'code' =>'TOPAZ','name' => 'Topaz','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>965, 'make_id' =>45, 'code' =>'TRACER','name' => 'Tracer','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>966, 'make_id' =>45, 'code' =>'VILLA', 'name' =>'Villager','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>967, 'make_id' =>45, 'code' =>'MERCZEP','name' => 'Zephyr','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>968, 'make_id' =>45, 'code' =>'MEOTH','name' => 'Other Mercury Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>969, 'make_id' =>46, 'code' =>'SCORP', 'name' =>'Scorpio','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>970, 'make_id' =>46, 'code' =>'XR4TI', 'name' =>'XR4Ti','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>971, 'make_id' =>46, 'code' =>'MEROTH', 'name' =>'Other Merkur Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>972, 'make_id' =>47, 'code' =>'COOPRCLUB_MODELS', 'name' =>'Cooper Clubman Models (2)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>973, 'make_id' =>47, 'code' =>'COOPERCLUB', 'name' =>' - Cooper Clubman','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>974, 'make_id' =>47, 'code' =>'COOPRCLUBS','name' => ' - Cooper S Clubman','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>975, 'make_id' =>47, 'code' =>'COOPCOUNTRY_MODELS', 'name' =>'Cooper Countryman Models (2)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>976, 'make_id' =>47, 'code' =>'COUNTRYMAN', 'name' =>' - Cooper Countryman','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>977, 'make_id' =>47, 'code' =>'COUNTRYMNS', 'name' =>' - Cooper S Countryman','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>978, 'make_id' =>47, 'code' =>'COOPCOUP_MODELS', 'name' =>'Cooper Coupe Models (2)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>979, 'make_id' =>47, 'code' =>'MINICOUPE','name' => ' - Cooper Coupe','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>980, 'make_id' =>47, 'code' =>'MINISCOUPE','name' => ' - Cooper S Coupe','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>981, 'make_id' =>47, 'code' =>'COOPER_MODELS','name' => 'Cooper Models (2)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>982, 'make_id' =>47, 'code' =>'COOPER', 'name' =>' - Cooper','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>983, 'make_id' =>47, 'code' =>'COOPERS','name' => ' - Cooper S','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>984, 'make_id' =>47, 'code' =>'COOPRROAD_MODELS', 'name' =>'Cooper Roadster Models (2)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>985, 'make_id' =>47, 'code' =>'COOPERROAD', 'name' =>' - Cooper Roadster','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>986, 'make_id' =>47, 'code' =>'COOPERSRD', 'name' =>' - Cooper S Roadster','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>987, 'make_id' =>48, 'code' =>'3000GT','name' => '3000GT','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>988, 'make_id' =>48, 'code' =>'CORD','name' => 'Cordia','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>989, 'make_id' =>48, 'code' =>'DIAMAN', 'name' =>'Diamante','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>990, 'make_id' =>48, 'code' =>'ECLIP','name' => 'Eclipse','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>991, 'make_id' =>48, 'code' =>'ENDEAVOR', 'name' =>'Endeavor','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>992, 'make_id' =>48, 'code' =>'MITEXP','name' => 'Expo','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>993, 'make_id' =>48, 'code' =>'GALANT','name' => 'Galant','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>994, 'make_id' =>48, 'code' =>'MITI', 'name' =>'i','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>995, 'make_id' =>48, 'code' =>'LANCERMITS', 'name' =>'Lancer','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>996, 'make_id' =>48, 'code' =>'LANCEREVO', 'name' =>'Lancer Evolution','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>997, 'make_id' =>48, 'code' =>'MITPU', 'name' =>'Mighty Max','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>998, 'make_id' =>48, 'code' =>'MIRAGE', 'name' =>'Mirage','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>999, 'make_id' =>48, 'code' =>'MONT','name' => 'Montero','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1000, 'make_id' =>48,'code' => 'MONTSPORT','name' => 'Montero Sport','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1001, 'make_id' =>48,'code' => 'OUTLANDER', 'name' =>'Outlander','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1002, 'make_id' =>48,'code' => 'OUTLANDSPT', 'name' =>'Outlander Sport','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1003, 'make_id' =>48,'code' => 'PRECIS','name' => 'Precis','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1004, 'make_id' =>48,'code' => 'RAIDERMITS', 'name' =>'Raider','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1005, 'make_id' =>48,'code' => 'SIGMA', 'name' =>'Sigma','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1006, 'make_id' =>48,'code' => 'MITSTAR', 'name' =>'Starion','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1007, 'make_id' =>48,'code' => 'TRED', 'name' =>'Tredia','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1008, 'make_id' =>48,'code' => 'MITVAN','name' => 'Van','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1009, 'make_id' =>48,'code' => 'MITOTH', 'name' =>'Other Mitsubishi Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1010, 'make_id' =>49,'code' => 'NIS200SX','name' => '200SX','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1011, 'make_id' =>49,'code' => '240SX', 'name' =>'240SX','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1012, 'make_id' =>49,'code' => '300ZXTURBO','name' => '300ZX','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1013, 'make_id' =>49,'code' => '350Z', 'name' =>'350Z','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1014, 'make_id' =>49,'code' => '370Z', 'name' =>'370Z','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1015, 'make_id' =>49,'code' => 'ALTIMA', 'name' =>'Altima','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1016, 'make_id' =>49,'code' => 'PATHARMADA','name' => 'Armada','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1017, 'make_id' =>49,'code' => 'AXXESS', 'name' =>'Axxess','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1018, 'make_id' =>49,'code' => 'CUBE', 'name' =>'Cube','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1019, 'make_id' =>49,'code' => 'FRONTI', 'name' =>'Frontier','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1020, 'make_id' =>49,'code' => 'GT-R','name' => 'GT-R','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1021, 'make_id' =>49, 'code' =>'JUKE','name' =>'Juke','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1022, 'make_id' =>49, 'code' =>'LEAF','name' => 'Leaf','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1023, 'make_id' =>49, 'code' =>'MAX', 'name' =>'Maxima','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1024, 'make_id' =>49, 'code' =>'MURANO','name' => 'Murano','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1025, 'make_id' =>49, 'code' =>'MURANOCROS','name' => 'Murano CrossCabriolet','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1026, 'make_id' =>49, 'code' =>'NV', 'name' =>'NV','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1027, 'make_id' =>49, 'code' =>'NX', 'name' =>'NX','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1028, 'make_id' =>49, 'code' =>'PATH', 'name' =>'Pathfinder','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1029, 'make_id' =>49, 'code' =>'NISPU', 'name' =>'Pickup','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1030, 'make_id' =>49, 'code' =>'PULSAR','name' => 'Pulsar','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1031, 'make_id' =>49, 'code' =>'QUEST', 'name' =>'Quest','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1032, 'make_id' =>49, 'code' =>'ROGUE', 'name' =>'Rogue','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1033, 'make_id' =>49, 'code' =>'SENTRA','name' => 'Sentra','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1034, 'make_id' =>49, 'code' =>'STANZA','name' => 'Stanza','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1035, 'make_id' =>49, 'code' =>'TITAN', 'name' =>'Titan','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1036, 'make_id' =>49, 'code' =>'NISVAN','name' => 'Van','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1037, 'make_id' =>49, 'code' =>'VERSA', 'name' =>'Versa','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1038, 'make_id' =>49, 'code' =>'XTERRA','name' => 'Xterra','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1039, 'make_id' =>49, 'code' =>'NISSOTH','name' => 'Other Nissan Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1040, 'make_id' =>50, 'code' =>'88','name' => '88','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1041, 'make_id' =>50, 'code' =>'ACHIEV', 'name' =>'Achieva','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1042, 'make_id' =>50, 'code' =>'ALERO','name' => 'Alero','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1043, 'make_id' =>50, 'code' =>'AURORA', 'name' =>'Aurora','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1044, 'make_id' =>50, 'code' =>'BRAV', 'name' =>'Bravada','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1045, 'make_id' =>50, 'code' =>'CUCR', 'name' =>'Custom Cruiser','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1046, 'make_id' =>50, 'code' =>'OLDCUS', 'name' =>'Cutlass','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1047, 'make_id' =>50, 'code' =>'OLDCALAIS','name' => 'Cutlass Calais','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1048, 'make_id' =>50, 'code' =>'CIERA','name' => 'Cutlass Ciera','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1049, 'make_id' =>50, 'code' =>'CSUPR', 'name' =>'Cutlass Supreme','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1050, 'make_id' =>50, 'code' =>'OLDSFIR','name' => 'Firenza','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1051, 'make_id' =>50, 'code' =>'INTRIG', 'name' =>'Intrigue','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1052, 'make_id' =>50, 'code' =>'98', 'name' =>'Ninety-Eight','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1053, 'make_id' =>50, 'code' =>'OMEG','name' => 'Omega','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1054, 'make_id' =>50, 'code' =>'REGEN', 'name' =>'Regency','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1055, 'make_id' =>50, 'code' =>'SILHO', 'name' =>'Silhouette','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1056, 'make_id' =>50, 'code' =>'TORO', 'name' =>'Toronado','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1057, 'make_id' =>50, 'code' =>'OLDOTH','name' => 'Other Oldsmobile Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1058, 'make_id' =>51, 'code' =>'405', 'name' =>'405','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1059, 'make_id' =>51, 'code' =>'504', 'name' =>'504','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1060, 'make_id' =>51, 'code' =>'505','name' => '505','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1061, 'make_id' =>51, 'code' =>'604','name' => '604','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1062, 'make_id' =>51, 'code' =>'UNAVAILPEU','name' => 'Other Peugeot Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1063, 'make_id' =>52, 'code' =>'ACC', 'name' =>'Acclaim','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1064, 'make_id' =>52, 'code' =>'ARROW', 'name' =>'Arrow','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1065, 'make_id' =>52, 'code' =>'BREEZE', 'name' =>'Breeze','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1066, 'make_id' =>52, 'code' =>'CARAVE', 'name' =>'Caravelle','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1067, 'make_id' =>52, 'code' =>'CHAMP','name' => 'Champ','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1068, 'make_id' =>52, 'code' =>'COLT', 'name' =>'Colt','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1069, 'make_id' =>52, 'code' =>'PLYMCONQ', 'name' =>'Conquest','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1070, 'make_id' =>52, 'code' =>'GRANFURY', 'name' =>'Gran Fury','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1071, 'make_id' =>52, 'code' =>'PLYMGRANV','name' => 'Grand Voyager','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1072, 'make_id' =>52, 'code' =>'HORI','name' => 'Horizon','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1073, 'make_id' =>52, 'code' =>'LASER','name' => 'Laser','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1074, 'make_id' =>52, 'code' =>'NEON', 'name' =>'Neon','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1075, 'make_id' =>52, 'code' =>'PROWLE','name' => 'Prowler','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1076, 'make_id' =>52, 'code' =>'RELI', 'name' =>'Reliant','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1077, 'make_id' =>52, 'code' =>'SAPPOROPLY', 'name' =>'Sapporo','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1078, 'make_id' =>52, 'code' =>'SCAMP', 'name' =>'Scamp','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1079, 'make_id' =>52, 'code' =>'SUNDAN', 'name' =>'Sundance','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1080, 'make_id' =>52, 'code' =>'TRAILDUST','name' => 'Trailduster','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1081, 'make_id' =>52, 'code' =>'VOYA', 'name' =>'Voyager','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1082, 'make_id' =>52, 'code' =>'PLYOTH','name' => 'Other Plymouth Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1083, 'make_id' =>53, 'code' =>'T-1000','name' => '1000','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1084, 'make_id' =>53, 'code' =>'6000','name' => '6000','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1085, 'make_id' =>53, 'code' =>'AZTEK', 'name' =>'Aztek','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1086, 'make_id' =>53, 'code' =>'BON','name' => 'Bonneville','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1087, 'make_id' =>53, 'code' =>'CATALINA','name' => 'Catalina','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1088, 'make_id' =>53, 'code' =>'FIERO', 'name' =>'Fiero','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1089, 'make_id' =>53, 'code' =>'FBIRD', 'name' =>'Firebird','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1090, 'make_id' =>53, 'code' =>'G3', 'name' =>'G3','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1091, 'make_id' =>53, 'code' =>'G5', 'name' =>'G5','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1092, 'make_id' =>53, 'code' =>'G6', 'name' =>'G6','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1093, 'make_id' =>53, 'code' =>'G8','name' => 'G8','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1094, 'make_id' =>53, 'code' =>'GRNDAM','name' => 'Grand Am','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1095, 'make_id' =>53, 'code' =>'GP', 'name' =>'Grand Prix','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1096, 'make_id' =>53, 'code' =>'GTO', 'name' =>'GTO','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1097, 'make_id' =>53, 'code' =>'J2000','name' => 'J2000','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1098, 'make_id' =>53, 'code' =>'LEMANS','name' => 'Le Mans','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1099, 'make_id' =>53, 'code' =>'MONTANA','name' => 'Montana','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1100, 'make_id' =>53, 'code' =>'PARISI', 'name' =>'Parisienne','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1101, 'make_id' =>53, 'code' =>'PHOENIX', 'name' =>'Phoenix','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1102, 'make_id' =>53, 'code' =>'SAFARIPONT','name' => 'Safari','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1103, 'make_id' =>53, 'code' =>'SOLSTICE','name' => 'Solstice','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1104, 'make_id' =>53, 'code' =>'SUNBIR', 'name' =>'Sunbird','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1105, 'make_id' =>53, 'code' =>'SUNFIR', 'name' =>'Sunfire','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1106, 'make_id' =>53, 'code' =>'TORRENT','name' => 'Torrent','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1107, 'make_id' =>53, 'code' =>'TS','name' => 'Trans Sport','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1108, 'make_id' =>53, 'code' =>'VIBE','name' => 'Vibe','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1109, 'make_id' =>53, 'code' =>'PONOTH','name' => 'Other Pontiac Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1110, 'make_id' =>54, 'code' =>'911','name' => '911','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1111, 'make_id' =>54, 'code' =>'924','name' => '924','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1112, 'make_id' =>54, 'code' =>'928','name' => '928','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1113, 'make_id' =>54, 'code' =>'944','name' => '944','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1114, 'make_id' =>54, 'code' =>'968','name' => '968','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1115, 'make_id' =>54, 'code' =>'BOXSTE', 'name' =>'Boxster','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1116, 'make_id' =>54, 'code' =>'CARRERAGT','name' => 'Carrera GT','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1117, 'make_id' =>54, 'code' =>'CAYENNE', 'name' =>'Cayenne','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1118, 'make_id' =>54, 'code' =>'CAYMAN', 'name' =>'Cayman','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1119, 'make_id' =>54, 'code' =>'PANAMERA','name' => 'Panamera','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1120, 'make_id' =>54, 'code' =>'POROTH', 'name' =>'Other Porsche Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1121, 'make_id' =>55, 'code' =>'RAM1504WD','name' => '1500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1122, 'make_id' =>55, 'code' =>'RAM25002WD','name' => '2500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1123, 'make_id' =>55, 'code' =>'RAM3502WD', 'name' =>'3500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1124, 'make_id' =>55, 'code' =>'RAM4500', 'name' =>'4500','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1125, 'make_id' =>56, 'code' =>'18I','name' => '18i','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1126, 'make_id' =>56, 'code' =>'FU', 'name' =>'Fuego','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1127, 'make_id' =>56, 'code' =>'LECAR','name' => 'Le Car','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1128, 'make_id' =>56, 'code' =>'R18','name' => 'R18','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1129, 'make_id' =>56, 'code' =>'RENSPORT','name' => 'Sportwagon','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1130, 'make_id' =>56, 'code' =>'UNAVAILREN','name' => 'Other Renault Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1131, 'make_id' =>57, 'code' =>'CAMAR','name' => 'Camargue','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1132, 'make_id' =>57, 'code' =>'CORN', 'name' =>'Corniche','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1133, 'make_id' =>57, 'code' =>'GHOST', 'name' =>'Ghost','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1134, 'make_id' =>57, 'code' =>'PARKWARD', 'name' =>'Park Ward','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1135, 'make_id' =>57, 'code' =>'PHANT', 'name' =>'Phantom','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1136, 'make_id' =>57, 'code' =>'DAWN', 'name' =>'Silver Dawn','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1137, 'make_id' =>57, 'code' =>'SILSERAPH', 'name' =>'Silver Seraph','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1138, 'make_id' =>57, 'code' =>'RRSPIR','name' => 'Silver Spirit','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1139, 'make_id' =>57, 'code' =>'SPUR', 'name' =>'Silver Spur','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1140, 'make_id' =>57, 'code' =>'UNAVAILRR','name' => 'Other Rolls-Royce Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1141, 'make_id' =>58, 'code' =>'9-2X','name' => '9-2X','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1142, 'make_id' =>58, 'code' =>'9-3', 'name' =>'9-3','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1143, 'make_id' =>58, 'code' =>'9-4X','name' => '9-4X','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1144, 'make_id' =>58, 'code' =>'9-5', 'name' =>'9-5','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1145, 'make_id' =>58, 'code' =>'97X', 'name' =>'9-7X','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1146, 'make_id' =>58, 'code' =>'900','name' => '900','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1147, 'make_id' =>58, 'code' =>'9000','name' => '9000','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1148, 'make_id' =>58, 'code' =>'SAOTH','name' => 'Other Saab Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1149, 'make_id' =>59, 'code' =>'ASTRA','name' => 'Astra','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1150, 'make_id' =>59, 'code' =>'AURA','name' => 'Aura','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1151, 'make_id' =>59, 'code' =>'ION', 'name' =>'ION','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1152, 'make_id' =>59, 'code' =>'L_SERIES', 'name' =>'L Series (3)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1153, 'make_id' =>59, 'code' =>'L100', 'name' =>' - L100','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1154, 'make_id' =>59, 'code' =>'L200','name' => ' - L200','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1155, 'make_id' =>59, 'code' =>'L300','name' => ' - L300','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1156, 'make_id' =>59, 'code' =>'LSSATURN','name' => 'LS','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1157, 'make_id' =>59, 'code' =>'LW_SERIES', 'name' =>'LW Series (4)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1158, 'make_id' =>59, 'code' =>'LW', 'name' =>' - LW1','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1159, 'make_id' =>59, 'code' =>'LW2', 'name' =>' - LW2','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1160, 'make_id' =>59, 'code' =>'LW200','name' => ' - LW200','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1161, 'make_id' =>59, 'code' =>'LW300', 'name' =>' - LW300','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1162, 'make_id' =>59, 'code' =>'OUTLOOK','name' => 'Outlook','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1163, 'make_id' =>59, 'code' =>'RELAY', 'name' =>'Relay','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1164, 'make_id' =>59, 'code' =>'SC_SERIES', 'name' =>'SC Series (2)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1165, 'make_id' =>59, 'code' =>'SC1','name' => ' - SC1','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1166, 'make_id' =>59, 'code' =>'SC2', 'name' =>' - SC2','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1167, 'make_id' =>59, 'code' =>'SKY', 'name' =>'Sky','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1168, 'make_id' =>59, 'code' =>'SL_SERIES','name' => 'SL Series (3)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1169, 'make_id' =>59, 'code' =>'SL', 'name' =>' - SL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1170, 'make_id' =>59, 'code' =>'SL1','name' => ' - SL1','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1171, 'make_id' =>59, 'code' =>'SL2','name' => ' - SL2','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1172, 'make_id' =>59, 'code' =>'SW_SERIES', 'name' =>'SW Series (2)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1173, 'make_id' =>59, 'code' =>'SW1', 'name' =>' - SW1','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1174, 'make_id' =>59, 'code' =>'SW2','name' => ' - SW2','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1175, 'make_id' =>59, 'code' =>'VUE','name' => 'Vue','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1176, 'make_id' =>59, 'code' =>'SATOTH','name' => 'Other Saturn Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1177, 'make_id' =>60, 'code' =>'SCIFRS','name' => 'FR-S','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1178, 'make_id' =>60, 'code' =>'IQ', 'name' =>'iQ','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1179, 'make_id' =>60, 'code' =>'TC', 'name' =>'tC','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1180, 'make_id' =>60, 'code' =>'XA', 'name' =>'xA','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1181, 'make_id' =>60, 'code' =>'XB', 'name' =>'xB','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1182, 'make_id' =>60, 'code' =>'XD','name' => 'xD','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1183, 'make_id' =>61, 'code' =>'FORTWO','name' => 'fortwo','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1184, 'make_id' =>61, 'code' =>'SMOTH','name' => 'Other smart Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1185, 'make_id' =>62, 'code' =>'SRTVIPER', 'name' =>'Viper','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1186, 'make_id' =>63, 'code' =>'825', 'name' =>'825','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1187, 'make_id' =>63, 'code' =>'827', 'name' =>'827','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1188, 'make_id' =>63, 'code' =>'UNAVAILSTE', 'name' =>'Other Sterling Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1189, 'make_id' =>64, 'code' =>'BAJA', 'name' =>'Baja','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1190, 'make_id' =>64, 'code' =>'BRAT', 'name' =>'Brat','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1191, 'make_id' =>64, 'code' =>'SUBBRZ','name' => 'BRZ','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1192, 'make_id' =>64, 'code' =>'FOREST','name' => 'Forester','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1193, 'make_id' =>64, 'code' =>'IMPREZ', 'name' =>'Impreza','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1194, 'make_id' =>64, 'code' =>'IMPWRX', 'name' =>'Impreza WRX','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1195, 'make_id' =>64, 'code' =>'JUSTY','name' => 'Justy','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1196, 'make_id' =>64, 'code' =>'SUBL', 'name' =>'L Series','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1197, 'make_id' =>64, 'code' =>'LEGACY','name' => 'Legacy','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1198, 'make_id' =>64, 'code' =>'LOYALE','name' => 'Loyale','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1199, 'make_id' =>64, 'code' =>'SUBOUTBK','name' => 'Outback','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1200, 'make_id' =>64, 'code' =>'SVX', 'name' =>'SVX','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1201, 'make_id' =>64, 'code' =>'B9TRIBECA', 'name' =>'Tribeca','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1202, 'make_id' =>64, 'code' =>'XT', 'name' =>'XT','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1203, 'make_id' =>64, 'code' =>'XVCRSSTREK', 'name' =>'XV Crosstrek','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1204, 'make_id' =>64, 'code' =>'SUBOTH','name' => 'Other Subaru Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1205, 'make_id' =>65, 'code' =>'AERIO', 'name' =>'Aerio','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1206, 'make_id' =>65, 'code' =>'EQUATOR','name' => 'Equator','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1207, 'make_id' =>65, 'code' =>'ESTEEM', 'name' =>'Esteem','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1208, 'make_id' =>65, 'code' =>'FORENZA','name' => 'Forenza','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1209, 'make_id' =>65, 'code' =>'GRANDV', 'name' =>'Grand Vitara','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1210, 'make_id' =>65, 'code' =>'KIZASHI','name' => 'Kizashi','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1211, 'make_id' =>65, 'code' =>'RENO', 'name' =>'Reno','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1212, 'make_id' =>65, 'code' =>'SAMUR', 'name' =>'Samurai','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1213, 'make_id' =>65, 'code' =>'SIDE', 'name' =>'Sidekick','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1214, 'make_id' =>65, 'code' =>'SWIFT', 'name' =>'Swift','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1215, 'make_id' =>65, 'code' =>'SX4', 'name' =>'SX4','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1216, 'make_id' =>65, 'code' =>'VERONA', 'name' =>'Verona','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1217, 'make_id' =>65, 'code' =>'VITARA','name' => 'Vitara','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1218, 'make_id' =>65, 'code' =>'X90', 'name' =>'X-90','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1219, 'make_id' =>65, 'code' =>'XL7', 'name' =>'XL7','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1220, 'make_id' =>65, 'code' =>'SUZOTH','name' => 'Other Suzuki Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1221, 'make_id' =>66, 'code' =>'ROADSTER','name' => 'Roadster','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1222, 'make_id' =>67, 'code' =>'4RUN', 'name' =>'4Runner','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1223, 'make_id' =>67, 'code' =>'AVALON', 'name' =>'Avalon','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1224, 'make_id' =>67, 'code' =>'CAMRY', 'name' =>'Camry','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1225, 'make_id' =>67, 'code' =>'CELICA','name' => 'Celica','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1226, 'make_id' =>67, 'code' =>'COROL', 'name' =>'Corolla','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1227, 'make_id' =>67, 'code' =>'CORONA', 'name' =>'Corona','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1228, 'make_id' =>67, 'code' =>'CRESS','name' => 'Cressida','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1229, 'make_id' =>67, 'code' =>'ECHO', 'name' =>'Echo','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1230, 'make_id' =>67, 'code' =>'FJCRUIS', 'name' =>'FJ Cruiser','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1231, 'make_id' =>67, 'code' =>'HIGHLANDER','name' => 'Highlander','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1232, 'make_id' =>67, 'code' =>'LC', 'name' =>'Land Cruiser','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1233, 'make_id' =>67, 'code' =>'MATRIX', 'name' =>'Matrix','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1234, 'make_id' =>67, 'code' =>'MR2','name' => 'MR2','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1235, 'make_id' =>67, 'code' =>'MR2SPYDR', 'name' =>'MR2 Spyder','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1236, 'make_id' =>67, 'code' =>'PASEO', 'name' =>'Paseo','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1237, 'make_id' =>67, 'code' =>'PICKUP','name' => 'Pickup','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1238, 'make_id' =>67, 'code' =>'PREVIA','name' => 'Previa','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1239, 'make_id' =>67,'code' => 'PRIUS','name' => 'Prius','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1240, 'make_id' =>67,'code' => 'PRIUSC','name' => 'Prius C','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1241, 'make_id' =>67,'code' => 'PRIUSV','name' => 'Prius V','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1242, 'make_id' =>67,'code' => 'RAV4','name' => 'RAV4','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1243, 'make_id' =>67,'code' => 'SEQUOIA','name' => 'Sequoia','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1244, 'make_id' =>67,'code' => 'SIENNA','name' => 'Sienna','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1245, 'make_id' =>67,'code' => 'SOLARA','name' => 'Solara','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1246, 'make_id' =>67,'code' => 'STARLET','name' => 'Starlet','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1247, 'make_id' =>67,'code' => 'SUPRA', 'name' =>'Supra','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1248, 'make_id' =>67,'code' => 'T100', 'name' =>'T100','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1249, 'make_id' =>67,'code' => 'TACOMA','name' => 'Tacoma','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1250, 'make_id' =>67,'code' => 'TERCEL', 'name' =>'Tercel','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1251, 'make_id' =>67,'code' => 'TUNDRA', 'name' =>'Tundra','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1252, 'make_id' =>67,'code' => 'TOYVAN', 'name' =>'Van','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1253, 'make_id' =>67, 'code' =>'VENZA', 'name' =>'Venza','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1254, 'make_id' =>67, 'code' =>'YARIS','name' => 'Yaris','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1255, 'make_id' =>67, 'code' =>'TOYOTH','name' => 'Other Toyota Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1256, 'make_id' =>68, 'code' =>'TR7','name' => 'TR7','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1257, 'make_id' =>68, 'code' =>'TR8', 'name' =>'TR8','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1258, 'make_id' =>68, 'code' =>'TRIOTH','name' => 'Other Triumph Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1259, 'make_id' =>69, 'code' =>'BEETLE','name' => 'Beetle','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1260, 'make_id' =>69, 'code' =>'VOLKSCAB','name' => 'Cabrio','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1261, 'make_id' =>69, 'code' =>'CAB','name' => 'Cabriolet','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1262, 'make_id' =>69, 'code' =>'CC', 'name' =>'CC','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1263, 'make_id' =>69, 'code' =>'CORR', 'name' =>'Corrado','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1264, 'make_id' =>69, 'code' =>'DASHER','name' => 'Dasher','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1265, 'make_id' =>69, 'code' =>'EOS','name' => 'Eos','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1266, 'make_id' =>69, 'code' =>'EUROVAN','name' => 'Eurovan','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1267, 'make_id' =>69, 'code' =>'VOLKSFOX','name' =>'Fox','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1268, 'make_id' =>69, 'code' =>'GLI', 'name' =>'GLI','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1269, 'make_id' =>69, 'code' =>'GOLFR','name' => 'Golf R','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1270, 'make_id' =>69, 'code' =>'GTI', 'name' =>'GTI','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1271, 'make_id' =>69, 'code' =>'GOLFANDRABBITMODELS','name' => 'Golf and Rabbit Models (2)','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1272, 'make_id' =>69, 'code' =>'GOLF', 'name' =>' - Golf','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1273, 'make_id' =>69, 'code' =>'RABBIT','name' => ' - Rabbit','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1274, 'make_id' =>69, 'code' =>'JET','name' => 'Jetta','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1275, 'make_id' =>69, 'code' =>'PASS','name' => 'Passat','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1276, 'make_id' =>69, 'code' =>'PHAETON','name' => 'Phaeton','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1277, 'make_id' =>69, 'code' =>'RABBITPU', 'name' =>'Pickup','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1278, 'make_id' =>69, 'code' =>'QUAN', 'name' =>'Quantum','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1279, 'make_id' =>69, 'code' =>'R32', 'name' =>'R32','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1280, 'make_id' =>69, 'code' =>'ROUTAN', 'name' =>'Routan','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1281, 'make_id' =>69, 'code' =>'SCIR', 'name' =>'Scirocco','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1282, 'make_id' =>69, 'code' =>'TIGUAN','name' => 'Tiguan','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1283, 'make_id' =>69, 'code' =>'TOUAREG','name' => 'Touareg','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1284, 'make_id' =>69, 'code' =>'VANAG', 'name' =>'Vanagon','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1285, 'make_id' =>69, 'code' =>'VWOTH','name' => 'Other Volkswagen Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1286, 'make_id' =>70, 'code' =>'240', 'name' =>'240','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1287, 'make_id' =>70, 'code' =>'260','name' => '260','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1288, 'make_id' =>70, 'code' =>'740','name' => '740','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1289, 'make_id' =>70, 'code' =>'760','name' => '760','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1290, 'make_id' =>70, 'code' =>'780','name' => '780','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1291, 'make_id' =>70, 'code' =>'850', 'name' =>'850','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1292, 'make_id' =>70, 'code' =>'940', 'name' =>'940','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1293, 'make_id' =>70, 'code' =>'960','name' => '960','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1294, 'make_id' =>70, 'code' =>'C30','name' => 'C30','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1295, 'make_id' =>70, 'code' =>'C70','name' => 'C70','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1296, 'make_id' =>70, 'code' =>'S40', 'name' =>'S40','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1297, 'make_id' =>70, 'code' =>'S60', 'name' =>'S60','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1298, 'make_id' =>70, 'code' =>'S70', 'name' =>'S70','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1299, 'make_id' =>70, 'code' =>'S80','name' => 'S80','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1300, 'make_id' =>70, 'code' =>'S90','name' => 'S90','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1301, 'make_id' =>70, 'code' =>'V40','name' =>'V40','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1302, 'make_id' =>70, 'code' =>'V50', 'name' =>'V50','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1303, 'make_id' =>70, 'code' =>'V70', 'name' =>'V70','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1304, 'make_id' =>70, 'code' =>'V90', 'name' =>'V90','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1305, 'make_id' =>70, 'code' =>'XC60', 'name' =>'XC60','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1306, 'make_id' =>70, 'code' =>'XC', 'name' =>'XC70','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1307, 'make_id' =>70, 'code' =>'XC90', 'name' =>'XC90','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1308, 'make_id' =>70, 'code' =>'VOLOTH','name' => 'Other Volvo Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1309, 'make_id' =>71, 'code' =>'GV', 'name' =>'GV','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1310, 'make_id' =>71, 'code' =>'GVC','name' => 'GVC','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1311, 'make_id' =>71, 'code' =>'GVL', 'name' =>'GVL','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1312, 'make_id' =>71, 'code' =>'GVS', 'name' =>'GVS','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1313, 'make_id' =>71, 'code' =>'GVX','name' => 'GVX','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
       array('id' =>1314, 'make_id' =>71, 'code' =>'YUOTH','name' => 'Other Yugo Models','year' => rand(1970, date('Y')), 'cost'=> $this->frand()),
-
     );
     DB::table('vehicle_models')->insert($models1);
-
   }
-
+  
   function frand($min=1000, $max=10000, $decimals = 2) {
     $scale = pow(10, $decimals);
     return mt_rand($min * $scale, $max * $scale) / $scale;
   }
-
 }
-
