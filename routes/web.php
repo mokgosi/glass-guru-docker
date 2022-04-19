@@ -25,6 +25,7 @@ Route::get('/dashboard', function (Request $request) {
     ]);
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/callback',  [OAuthController::class, 'callback']);
+// Route::get('/redirect',  [OAuthController::class, 'redirect']);
+// Route::get('/callback',  [OAuthController::class, 'callback']);
 
 require __DIR__.'/auth.php';
