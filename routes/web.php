@@ -1,8 +1,8 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
-use App\Http\Controllers\OAuthController;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,16 +16,16 @@ use App\Http\Controllers\OAuthController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
 });
 
-Route::get('/dashboard', function (Request $request) {
-    return view('dashboard', [
-        'clients' => $request->user()->clients,
-    ]);
-})->middleware(['auth'])->name('dashboard');
-
-// Route::get('/redirect',  [OAuthController::class, 'redirect']);
-// Route::get('/callback',  [OAuthController::class, 'callback']);
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';

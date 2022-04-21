@@ -122,7 +122,7 @@
                             @endif
 
 
-                            <div class="buttons">
+                            <div class="flex items-center justify-end mt-4">
                             <!-- Authorize Button -->
                             <form method="post" action="{{ route('passport.authorizations.approve') }}">
                                 @csrf
@@ -133,7 +133,7 @@
                                     <x-button >
                                         {{ __('Authorize') }}
                                     </x-button>
-                                </div>
+                                
                             </form>
 
                             <!-- Cancel Button -->
@@ -144,10 +144,11 @@
                                 <input type="hidden" name="state" value="{{ $request->state }}">
                                 <input type="hidden" name="client_id" value="{{ $client->id }}">
                                 <input type="hidden" name="auth_token" value="{{ $authToken }}">
-                                <x-button >
+                                <x-button ::class="{ danger: isDeleting }">
                                     {{ __('Cancel') }}
                                 </x-button>
                             </form>
+                            </div>
                         </div>
                             
                         </div>
